@@ -7,3 +7,4 @@ Capstone For Tech Elevator
 3. After the solution opens open Web.config in the Capstone.Web project.
 4. Under the connectionString tag, change the database name to what you named it in step 1.
 5. Application should be ready to run.
+6. You should be able see a list of parks after clicking "View Parks" on navigation bar.
