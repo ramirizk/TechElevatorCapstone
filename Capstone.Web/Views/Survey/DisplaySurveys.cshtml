@@ -1,0 +1,19 @@
+﻿@model List<Capstone.Web.Models.SurveyModel>
+
+@{
+    ViewBag.Title = "DailySurveyResults";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="parks_header">Thank you for participating in the survey!</h2>
+<h2 id="resultsheader">Daily Survey Results</h2>
+
+@{
+    foreach (var survey in Model)
+    {
+        <div class="result">
+            <p class="votes">Vote count: @survey.VoteCount, @survey.ParkName</p>
+            <img src="@("/Content/img/parks/" + survey.ParkCode.ToLower() + ".jpg")" name="@survey.ParkCode" />
+        </div>
+    }
+}

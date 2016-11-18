@@ -1,0 +1,50 @@
+﻿@model List<Capstone.Web.Models.WeatherModel>
+@{
+    ViewBag.Title = "Forecast";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<string> tempStuff;
+
+}
+
+<h2 class="park_name">Five Day Forecast for @ViewBag.ParkName</h2>
+
+@using (@Html.BeginForm("ForecastResult", "Weather", FormMethod.Post))
+{
+
+    <input type="hidden" name="parkCode" value=@Model[0].ParkCode />
+    <input type="hidden" name="temperatureUnit" value="@ViewBag.TemperatureUnitSwitch" />
+    <button id="convertbutton">Convert to @ViewBag.TemperatureUnitSwitch</button>
+
+}
+<div id="container">
+    @foreach (var forecast in Model)
+    {
+        <div id="day">
+            <h3>Day @forecast.FiveDayForecastValue</h3>
+
+            @if ((string)ViewBag.TemperatureUnitSwitch == "Celsius")
+            {
+                <p>High: @forecast.Convert(forecast.High) F</p>
+                <p>Low: @forecast.Convert(forecast.Low) F</p>
+            }
+            else
+            {
+                <p>High: @forecast.Convert(forecast.High) C</p>
+                <p>Low: @forecast.Convert(forecast.Low) C</p>
+            }
+            <img src=@("/Content/img/weather/" + forecast.Forecast + ".png") />
+
+            <p>@forecast.GetForecastDescription(forecast.Forecast)</p>
+
+            @{tempStuff = forecast.GetForecastModifier();
+            }
+            @foreach (string warning in tempStuff)
+            {
+                <p class="warning">@warning</p>
+            }
+            
+
+
+        </div>
+                }
+</div>

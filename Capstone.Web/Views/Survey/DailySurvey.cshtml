@@ -1,0 +1,33 @@
+﻿@model Capstone.Web.Models.SurveyModel
+@{
+    ViewBag.Title = "DailySurvey";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="parks_header">Daily Survey</h2>
+@using (Html.BeginForm("DailySurvey", "Survey", FormMethod.Post, new { @class = "surveyform" }))
+{
+    <div class="survey_item">
+        @Html.Label("parkCode", "Select Park for Survey")
+        @Html.DropDownListFor(m => m.ParkCode, (IEnumerable<SelectListItem>)ViewBag.ParkNames, new { name = "parkCode" })
+    </div>
+    <div class="survey_item">
+        @Html.Label("email", "Enter your email address")
+        @Html.TextBoxFor(m => m.Email, new { name = "email" })
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+    <div class="survey_item">
+        @Html.Label("state", "Select State")
+        @Html.DropDownListFor(m => m.State, (IEnumerable<SelectListItem>)ViewBag.States, new { name = "state" })
+    </div>
+    <div class="survey_item">
+        @Html.Label("activityLevel", "Select your activity level on a Scale of 1 (Sedentary)  to 10 (Wilt Chamberlain)")
+        @Html.DropDownListFor(m => m.ActivityLevel, (IEnumerable<SelectListItem>)ViewBag.Activity, new { name = "activityLevel" })
+
+    </div>
+    @*<div>
+            @Html.HiddenFor(m => m.ParkName, (IEnumerable<SelectListItem>)ViewBag.ParkNames[@Model.ParkCode])
+        </div>*@
+    <button id="submitbutton">Submit</button>
+}
+

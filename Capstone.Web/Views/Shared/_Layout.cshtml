@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>National Park Geek</title>
+    <link rel="stylesheet" href="~/Content/Styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="~/Content/img/logo.png" alt="National Park Logo" />
+        <h1>Welcome to National Park Weather Geek!</h1>
+        <p>Your weather source for the national parks, please take our daily survey before you leave! <strong> HAVE A WONDERFUL DAY!</strong></p>
+    </header>
+    <nav>
+        <ul>
+            <li name="home">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li name="parkslist">@Html.ActionLink("View Parks", "ParksList", "Parks")</li>
+            <li name="survey">@Html.ActionLink("Daily Survey", "DailySurvey", "Survey")</li>            
+        </ul>
+    </nav>
+    <section id="main-content">
+        @RenderBody()
+    </section>
+</body>
+</html>

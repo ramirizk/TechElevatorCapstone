@@ -1,0 +1,24 @@
+﻿@model List<Capstone.Web.Models.ParkModel>
+@{
+
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="parks_header">National Parks!</h2>
+
+@foreach (var park in Model)
+{
+    Html.RenderPartial("_ParkDisplay", park);
+
+    <div class="park_list">
+        <a href="@Url.Action("Detail","Parks",new {parkCode=park.ParkCode, parkName = park.ParkName})" >
+            <img class="img_list" name=@park.ParkCode src="@("/Content/img/parks/" + park.ParkCode.ToLower() + ".jpg")" />
+        </a>
+        <div class="detail_list">
+            <p class="park_name">@park.ParkName</p>
+            <p class="park_state">@park.State</p>
+            <p id="park_description">@park.ParkDescription</p>
+        </div>
+    </div>
+}

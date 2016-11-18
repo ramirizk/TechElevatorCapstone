@@ -1,0 +1,260 @@
+﻿html {
+    background-color: #2e4600;
+    color: white;
+}
+
+body {
+    font-family: 'Times New Roman';
+}
+
+
+header {
+    margin: 25px;
+    background-color: #9c5f3f;
+}
+
+    header h1 {
+        font-size: 30px;
+        padding-left: 10px;
+    }
+
+    header p {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    header img {
+        height: 110px;
+    }
+
+nav {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+
+    nav p {
+        font-size: 12px;
+        font-style: italic;
+        padding-left: 60px;
+    }
+
+ul {
+    padding-left: 25px;
+    height: 100%;
+}
+
+li {
+    padding-bottom: 4px;
+}
+
+    li a {
+        text-decoration: none;
+        font-size: 25px;
+        list-style: none;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+    }
+
+nav ul {
+    width: 100%;
+}
+
+    nav ul li {
+        margin-right: 20px;
+        border-radius: 8px;
+        list-style: none;
+        text-align: center;
+        width: 200px;
+        padding-top: 5px;
+        display: inline-block;
+        background-color: #A2C523;
+        font-size: 14pt;
+    }
+
+
+
+li a:hover {
+    text-decoration: underline;
+}
+
+#main-content h2 {
+    clear: both;
+    text-align: center;
+}
+
+.park_list a {
+    float: left;
+    display: inline-block;
+    width: 30%;
+    height: auto;
+}
+
+a .img_list {
+    width: 100%;
+    height: 100%;
+}
+
+.detail_list {
+    float: left;
+    display: inline-block;
+    width: 40%;
+    margin-left: 2%;
+}
+
+    .detail_list p {
+        float: left;
+        clear: left;
+        margin: 0%;
+    }
+
+.park_list {
+    clear: left;
+    margin-bottom: 20px;
+}
+
+#park_description {
+    margin-top: 5%;
+}
+
+.parks_header {
+    color: #f2eb80;
+    font-size: 36pt;
+    font-weight: bold;
+    margin: 25px;
+    padding: 0;
+}
+
+.park_name {
+    color: #f2eb80;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.park_state {
+    font-style: italic;
+}
+
+.park_list .detail_list {
+    vertical-align: top;
+}
+
+.warning {
+    color: hotpink;
+    font-weight: bold;
+}
+
+.details strong {
+    color: #f2eb80;
+}
+
+#forecast {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20pt;
+    color: #f2eb80;
+}
+
+    #forecast:hover {
+        color: #513202;
+    }
+
+#container {
+    width: 100%;
+    text-align: center;
+}
+
+    #container > #day {
+        width: 15%;
+        display: inline-block;
+        vertical-align: top;
+        margin: 33px;
+    }
+
+#convertbutton {
+    margin-left: 6%;
+    background-color: #a2c523;
+    font-size: large;
+    font-weight: 600;
+}
+
+.home {
+    color: #f2eb80;
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.about {
+    text-align: center;
+    font-size: 16pt;
+}
+
+.awesomepic {
+    width: auto;
+    height: auto;
+    max-height: 600px;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.survey_item {
+    margin-bottom: 15px;
+}
+
+    .survey_item label {
+        color: #f2eb80;
+        font-weight: bold;
+    }
+
+#submitbutton {
+    margin-top: 10px;
+    background-color: #a2c523;
+    font-size: large;
+    font-weight: 600;
+}
+
+.surveyform {
+    margin-left: 6%;
+}
+
+#resultsheader {
+    color: #f2eb80;
+    font-weight: bold;
+    padding: 0;
+}
+
+.result {
+    float:left;
+    clear:left;
+    display:inline-block;
+    margin:5px;
+    border-style:solid;
+    border-color:bisque;
+    border-radius:20px;
+    text-align:center;
+    margin-left: 3;
+}
+
+.result img {
+    width:70%;
+    height:auto;
+    margin-left:15%;
+    margin-bottom:5%;
+    display:block;
+}
+
+.votes {
+    color: #f2eb80;
+    font-weight: bold;
+    width:70%;
+    margin:3%;
+    margin-left:18%;
+    display:block;
+}
